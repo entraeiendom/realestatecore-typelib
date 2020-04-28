@@ -1,11 +1,10 @@
 package io.entraos.rec.domain;
 
-abstract class RealEstateCore {
+public abstract class RealEstateCore {
 
     private final String recClass;
     private String uuid;
     private String name;  //Eg 10104
-    private String locatedInUuid; //UUID to BuildingComponent/Storey/Floor
     private String tag;
 
     protected RealEstateCore(String recClass) {
@@ -33,14 +32,6 @@ abstract class RealEstateCore {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLocatedInUuid() {
-        return locatedInUuid;
-    }
-
-    public void setLocatedInUuid(String locatedInUuid) {
-        this.locatedInUuid = locatedInUuid;
     }
 
     public String getTag() {
