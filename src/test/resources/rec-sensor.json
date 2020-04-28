@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/rec/device",
+    "Sensor": "https://w3id.org/rec/device/Sensor",
+    "servesBuildingComponent": "https://w3id.org/rec/core/servesBuildingComponent",
+    "observesActuator": "https://w3id.org/rec/device/observesActuator",
+    "hasSuperDevice": "https://w3id.org/rec/core/hasSuperDevice",
+    "isMountedInBuildingComponent": "https://w3id.org/rec/core/isMountedInBuildingComponent",
+    "hasAlias": "http://proptechos.com/ontology/extension/hasAlias",
+    "servesBuilding": "https://w3id.org/rec/core/servesBuilding"
+  },
+  "@type": "Sensor",
+  "comment": {},
+  "createdTime": "2020-04-13T12:17:02.067Z",
+  "deviceMeasurementUnit": "https://w3id.org/rec/core/PartsPerMillion",
+  "devicePlacementContext": "https://w3id.org/rec/device/IndoorAir",
+  "deviceQuantityKind": "https://w3id.org/rec/core/CO2",
+  "hasAlias": [],
+  "hasDeviceFunctionType": null,
+  "hasSuperDevice": {
+    "@id": "https://en.proptechos.com/api/device/5dc009d6-d3c3-4381-bebd-910b0aca3a78",
+    "@type": "@id"
+  },
+  "isMountedInBuildingComponent": {
+    "@id": "https://en.proptechos.com/api/buildingcomponent/670b079d-6030-4150-8756-dfef7d785387",
+    "@type": "@id"
+  },
+  "@id": "https://en.proptechos.com/api/sensor/09a9fe00-414c-4c66-9dd9-8c2c6c6afe46",
+  "littera": "01/+001=434.1001-OS001/BACnet Interface/MSTP Network_1192/=563.RT_RY10103-Romtype_3/Application/CO2 Level",
+  "observesActuator": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "popularName": null,
+  "servesBuilding": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "servesBuildingComponent": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "source": {},
+  "updatedTime": null
+}

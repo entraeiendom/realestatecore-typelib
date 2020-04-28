@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/rec/core",
+    "Building": "https://w3id.org/rec/core/Building",
+    "hasAlias": "http://proptechos.com/ontology/extension/hasAlias",
+    "isPartOfRealEstate": "https://w3id.org/rec/core/isPartOfRealEstate"
+  },
+  "@type": "Building",
+  "comment": {},
+  "createdTime": "2020-04-13T09:08:26.280Z",
+  "geoReferenceOrigo": "0.0;0.0;0.0",
+  "hasAlias": [],
+  "isPartOfRealEstate": {
+    "@id": "https://en.proptechos.com/api/realestate/1dbb6518-704b-4b77-93af-70369b1d765c",
+    "@type": "@id"
+  },
+  "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+  "littera": null,
+  "popularName": "string",
+  "source": {},
+  "updatedTime": null
+}

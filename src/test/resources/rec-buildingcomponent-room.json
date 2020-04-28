@@ -1,0 +1,17 @@
+{
+  "class": "Room",
+  "id": "670b079d-6030-4150-8756-dfef7d785387",
+  "createdTime": "2020-04-13T11:13:41.777Z",
+  "updatedTime": null,
+  "hasAlias": [],
+  "comment": {},
+  "littera": "10103",
+  "popularName": null,
+  "roomType": "https://w3id.org/rec/building/Reception",
+  "source": {},
+  "isPartOfBuilding": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+  "hasSuperBuildingComponent": null,
+  "hasSubBuildingComponent": null,
+  "geoReferenceOrigo": "85.36;83.76;49.07",
+  "isPartOfStorey": "3274ae50-afa2-4177-bc2a-824359ad8aa0"
+}

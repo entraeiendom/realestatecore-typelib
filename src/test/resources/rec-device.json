@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/rec/core",
+    "Device": "https://w3id.org/rec/core/Device",
+    "servesDevice": "https://w3id.org/rec/core/servesDevice",
+    "servesBuildingComponent": "https://w3id.org/rec/core/servesBuildingComponent",
+    "isServedByDevice": "https://w3id.org/rec/core/servesDevice",
+    "hasSuperDevice": "https://w3id.org/rec/core/hasSuperDevice",
+    "hasSubDevices": "https://w3id.org/rec/core/hasSubDevice",
+    "isMountedInBuildingComponent": "https://w3id.org/rec/core/isMountedInBuildingComponent",
+    "hasAlias": "http://proptechos.com/ontology/extension/hasAlias",
+    "servesBuilding": "https://w3id.org/rec/core/servesBuilding"
+  },
+  "@type": "Device",
+  "comment": {},
+  "createdTime": "2020-04-13T12:17:01.900Z",
+  "deviceMeasurementUnit": null,
+  "devicePlacementContext": null,
+  "deviceQuantityKind": null,
+  "hasAlias": [],
+  "hasDeviceFunctionType": "https://w3id.org/rec/device/DataAcquisition",
+  "hasSubDevices": [
+    {
+      "@id": "https://en.proptechos.com/api/device/a51ab6b2-eb8d-4ab7-8f8b-571cb1a75c3a",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://en.proptechos.com/api/device/1bb47f89-0b11-40b3-9bbe-472137e58a33",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://en.proptechos.com/api/device/09a9fe00-414c-4c66-9dd9-8c2c6c6afe46",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://en.proptechos.com/api/device/304ca8ee-bbf3-4ded-8d7e-c52dcd05cbec",
+      "@type": "@id"
+    }
+  ],
+  "hasSuperDevice": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "isMountedInBuildingComponent": {
+    "@id": "https://en.proptechos.com/api/buildingcomponent/670b079d-6030-4150-8756-dfef7d785387",
+    "@type": "@id"
+  },
+  "isServedByDevice": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "@id": "https://en.proptechos.com/api/device/5dc009d6-d3c3-4381-bebd-910b0aca3a78",
+  "littera": null,
+  "popularName": null,
+  "servesBuilding": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "servesBuildingComponent": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "servesDevice": {
+    "@id": null,
+    "@type": "@id"
+  },
+  "source": {},
+  "updatedTime": "2020-04-13T12:17:02.127Z"
+}
