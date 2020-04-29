@@ -1,26 +1,19 @@
 package io.entraos.rec.domain;
 
-public class Sensor {
-    public static final String CLASS = "https://w3id.org/rec/device/Sensor";
+public class Sensor extends RealEstateCore {
+    public static final String REC_CLASS = "https://w3id.org/rec/device/Sensor";
 
-    private String uuid;
-    private String name;  //Eg T01
     private String mountedOnDeviceUuid;
-    private String tag; //Eg the Norwegian TFM code
     private String factoryId; //Mac address
 
-    public Sensor withUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public Sensor withName(String name) {
-        this.name = name;
-        return this;
+    public Sensor() {
+        super(REC_CLASS);
     }
 
-    public Sensor withTag(String tag) {
-        this.tag = tag;
-        return this;
+    public Sensor(String uuid, String name, String tag, String mountedOnDeviceUuid, String factoryId) {
+        super(REC_CLASS, uuid, name, tag);
+        this.mountedOnDeviceUuid = mountedOnDeviceUuid;
+        this.factoryId = factoryId;
     }
 
     public Sensor onDevice(String deviceUuid) {
@@ -33,6 +26,19 @@ public class Sensor {
         return this;
     }
 
+    public String getMountedOnDeviceUuid() {
+        return mountedOnDeviceUuid;
+    }
 
+    public void setMountedOnDeviceUuid(String mountedOnDeviceUuid) {
+        this.mountedOnDeviceUuid = mountedOnDeviceUuid;
+    }
 
+    public String getFactoryId() {
+        return factoryId;
+    }
+
+    public void setFactoryId(String factoryId) {
+        this.factoryId = factoryId;
+    }
 }

@@ -1,7 +1,7 @@
 package io.entraos.rec.domain;
 
 public class Room {
-    public static final String CLASS = "https://w3id.org/rec/core/Room";
+    public static final String REC_CLASS = "https://w3id.org/rec/core/Room";
 
     private String uuid;
     private String name;  //Eg 10104
