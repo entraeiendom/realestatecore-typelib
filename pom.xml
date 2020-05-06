@@ -78,12 +78,12 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>entraos</id>
+      <id>entraos-public</id>
       <name>EntraOS Release Repository</name>
       <url>https://nexus.entraos.io/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
-      <id>entraos</id>
+      <id>entraos-public</id>
       <name>EntraOS Snapshot Repository</name>
       <url>https://nexus.entraos.io/content/repositories/snapshots</url>
     </snapshotRepository>
