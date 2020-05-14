@@ -1,5 +1,6 @@
 package io.entraos.rec.mappers;
 
+import io.entraos.rec.domain.Sensor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,5 +28,7 @@ public class SensorJsonMapperTest {
 
     @Test
     public void fromJson() {
+        Sensor sensor = SensorJsonMapper.fromJson(json);
+        assertNotNull(sensor);
     }
 }
