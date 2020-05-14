@@ -1,5 +1,6 @@
 package io.entraos.rec.mappers;
 
+import com.jayway.jsonpath.PathNotFoundException;
 import io.entraos.rec.builders.SensorBuilder;
 import io.entraos.rec.domain.Sensor;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ public class SensorJsonMapper {
 
     public static Sensor fromJson(String json) {
         Sensor sensor = null;
-        if (json != null) {
+       try {
            String type = findJsonPathValue(json, "$.@type");
            if (type != null && type.equals("Sensor")) {
                //this.uuid, this.name, this.tag, this.mountedOnDeviceUuid,this.factoryId
@@ -28,6 +29,10 @@ public class SensorJsonMapper {
                        .withFactoryId(factoryId)
                        .build();
            }
+        } catch (PathNotFoundException e) {
+            log.debug("Failed to build Sensor from {}. Reason {}", json, e.getMessage());
+        } catch (IllegalArgumentException e) {
+            log.debug("Failed to build Sensor from {}. Reason {}", json, e.getMessage());
         }
         return sensor;
     }
