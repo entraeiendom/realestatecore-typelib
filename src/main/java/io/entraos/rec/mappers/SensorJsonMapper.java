@@ -16,7 +16,6 @@ public class SensorJsonMapper {
        try {
            String type = findJsonPathValue(json, "$.@type");
            if (type != null && type.equals("Sensor")) {
-               //this.uuid, this.name, this.tag, this.mountedOnDeviceUuid,this.factoryId
                String uuid = findJsonPathValue(json, "$.@id");
                String name = findJsonPathValue(json, "$.popularName");
                String tag = findJsonPathValue(json, "$.littera");
