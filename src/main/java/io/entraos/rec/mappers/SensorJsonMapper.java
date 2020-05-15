@@ -19,7 +19,7 @@ public class SensorJsonMapper {
                String uuid = findJsonPathValue(json, "$.@id");
                String name = findJsonPathValue(json, "$.popularName");
                String tag = findJsonPathValue(json, "$.littera");
-               String mountedOnDeviceUuid = findJsonPathValue(json, "$.isMountedInBuildingComponent.@id");
+               String mountedOnDeviceUuid = findJsonPathValue(json, "$.hasSuperDevice.@id");
                String factoryId = null; //TODO findJsonPathValue(json, "TODO");
                sensor = new SensorBuilder().withUuid(uuid)
                        .withName(name)
