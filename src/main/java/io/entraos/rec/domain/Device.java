@@ -10,4 +10,8 @@ public class Device extends RealEstateCore {
         super(REC_CLASS, uuid, name, tag);
         this.mountedInBuildingComponentUuid = mountedInBuildingComponentUuid;
     }
+
+    public String getMountedInBuildingComponentUuid() {
+        return mountedInBuildingComponentUuid;
+    }
 }
