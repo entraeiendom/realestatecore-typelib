@@ -38,6 +38,8 @@ public class BuildingComponentListMapperTest {
 
     @Test
     public void findFirst() {
+        URI expected = URI.create("https://en.proptechos.com/api/realestatecomponent?page=0&size=5");
+        assertEquals(expected, BuildingComponentListMapper.findFirst(json));
     }
 
     @Test
