@@ -8,8 +8,8 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import static io.entraos.rec.utils.JsonPathHelper.findJsonPathNumber;
-import static io.entraos.rec.utils.JsonPathHelper.findJsonPathValue;
+import static com.jayway.jsonpath.JsonPath.read;
+import static io.entraos.rec.utils.JsonPathHelper.*;
 import static org.slf4j.LoggerFactory.getLogger;
 
 /**
@@ -21,6 +21,9 @@ public class BuildingComponentListMapper {
     public static List<RealEstateCore> fromJson(String json) {
         List<RealEstateCore> buildingComponents = new ArrayList<>();
 
+        Object document = getDocument(json);
+        Object rooms = read(document, "$.member[0]");
+        log.info("ttt: {}", rooms);
         return buildingComponents;
     }
 

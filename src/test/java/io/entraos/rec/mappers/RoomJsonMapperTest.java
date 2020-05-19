@@ -1,11 +1,13 @@
 package io.entraos.rec.mappers;
 
 import io.entraos.rec.domain.Room;
+import io.entraos.rec.utils.JsonPathHelper;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
 import java.nio.file.Files;
+import java.util.LinkedHashMap;
 
 import static org.junit.Assert.*;
 
@@ -37,5 +39,13 @@ public class RoomJsonMapperTest {
         assertEquals("10103", room.getTag());
         assertEquals("e93bc342-33e2-4c70-ae8e-b4801839ae11", room.getLocatedInUuid());
         assertEquals("3274ae50-afa2-4177-bc2a-824359ad8aa0", room.getFloorUuid());
+    }
+
+    @Test
+    public void fromLinkedHashMap() {
+        LinkedHashMap jsonMap = JsonPathHelper.getJsonObjectFromJsonpathExpression(json, "$");
+        assertNotNull(jsonMap);
+        Room room = RoomJsonMapper.fromLinkedHashMap(jsonMap);
+        assertNotNull(room);
     }
 }

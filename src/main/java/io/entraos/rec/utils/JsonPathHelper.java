@@ -17,10 +17,14 @@ public class JsonPathHelper {
 
     private static final Logger log = LoggerFactory.getLogger(JsonPathHelper.class);
 
+    public static Object getDocument(String jsonString) {
+        return Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+    }
+
     public static List<String> findJsonpathList(String jsonString, String expression) throws PathNotFoundException {
         List<String> result = null;
         try {
-            Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+            Object document = getDocument(jsonString);
             result = JsonPath.read(document, expression);
 
         } catch (Exception e) {
@@ -48,7 +52,7 @@ public class JsonPathHelper {
     public static String getStringFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
         //String expression = "$.identity.uid";
         String value = "";
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+        Object document = getDocument(jsonString);
         String result = JsonPath.read(document, expression);
         value = result.toString();
 
@@ -57,7 +61,7 @@ public class JsonPathHelper {
 
 
     public static JSONArray getJsonArrayFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+        Object document = getDocument(jsonString);
         return JsonPath.read(document, expression);
     }
 
@@ -68,7 +72,7 @@ public class JsonPathHelper {
      * @throws PathNotFoundException
      */
     public static String[] getStringArrayFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+        Object document = getDocument(jsonString);
         String resArray = JsonPath.read(document, expression);
         String resString = resArray.toString().substring(1, resArray.toString().lastIndexOf("]") - 1);
         resString = resString.replace("},{", " ,");
@@ -84,12 +88,11 @@ public class JsonPathHelper {
      * @throws PathNotFoundException
      */
     public static String getStringFromJsonpathArrayExpression(String jsonString, String expression) throws PathNotFoundException {
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+        Object document = getDocument(jsonString);
         String resArray = JsonPath.read(document, expression);
         return resArray;
 
     }
-
 
     /**
      * @param jsonString
@@ -98,8 +101,28 @@ public class JsonPathHelper {
      * @throws PathNotFoundException
      */
     public static LinkedHashMap getJsonObjectFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
-        Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonString);
+        Object document = getDocument(jsonString);
         return JsonPath.read(document, expression);
+    }
+
+    /**
+     *
+     * @param jsonMap
+     * @param key
+     * @return
+     * @throws PathNotFoundException
+     */
+    public static String findString(LinkedHashMap<String, Object> jsonMap, String key) throws PathNotFoundException {
+        String value = null;
+        if (!jsonMap.containsKey(key)) {
+            throw new PathNotFoundException(key + " was not found in " + jsonMap);
+        }
+        try {
+            value = (String) jsonMap.get(key);
+        } catch (Exception e) {
+            log.debug("Failed to find {} in {}", key, jsonMap);
+        }
+        return value;
     }
 
 

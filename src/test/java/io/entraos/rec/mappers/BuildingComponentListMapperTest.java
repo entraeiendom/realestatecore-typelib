@@ -1,11 +1,13 @@
 package io.entraos.rec.mappers;
 
+import io.entraos.rec.domain.RealEstateCore;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
 import java.net.URI;
 import java.nio.file.Files;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -28,6 +30,9 @@ public class BuildingComponentListMapperTest {
 
     @Test
     public void fromJson() {
+        List<RealEstateCore> buildingComponents = BuildingComponentListMapper.fromJson(json);
+        assertNotNull(buildingComponents);
+        assertEquals(5, buildingComponents.size());
     }
 
     @Test
