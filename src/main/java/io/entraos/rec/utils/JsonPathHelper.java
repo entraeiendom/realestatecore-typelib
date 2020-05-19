@@ -33,6 +33,10 @@ public class JsonPathHelper {
         return JsonPath.parse(jsonString).read(expression);
     }
 
+    public static Number findJsonPathNumber(String jsonString, String expression) throws PathNotFoundException {
+        return JsonPath.parse(jsonString).read(expression);
+    }
+
     public static String findJsonPathNullableValue(String jsonString, String expression) {
         try {
             return findJsonPathValue(jsonString, expression);

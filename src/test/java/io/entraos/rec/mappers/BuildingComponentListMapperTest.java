@@ -44,5 +44,13 @@ public class BuildingComponentListMapperTest {
 
     @Test
     public void findLast() {
+        URI expected = URI.create("https://en.proptechos.com/api/realestatecomponent?page=160&size=5");
+        assertEquals(expected, BuildingComponentListMapper.findLast(json));
+    }
+
+    @Test
+    public void findCount() {
+        Number count = BuildingComponentListMapper.findCount(json);
+        assertEquals(count, BuildingComponentListMapper.findCount(json));
     }
 }
