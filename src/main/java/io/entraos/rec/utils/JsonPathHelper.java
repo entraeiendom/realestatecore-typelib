@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import static com.jayway.jsonpath.JsonPath.read;
+
 /**
  * Attribution Cantara https://github.com/Cantara/Whydah-TypeLib/blob/master/src/main/java/net/whydah/sso/basehelpers/JsonPathHelper.java
  */
@@ -25,7 +27,7 @@ public class JsonPathHelper {
         List<String> result = null;
         try {
             Object document = getDocument(jsonString);
-            result = JsonPath.read(document, expression);
+            result = read(document, expression);
 
         } catch (Exception e) {
             log.warn("Failed to parse JSON. Expression {}, JSON {}, ", expression, jsonString, e);
@@ -53,7 +55,7 @@ public class JsonPathHelper {
         //String expression = "$.identity.uid";
         String value = "";
         Object document = getDocument(jsonString);
-        String result = JsonPath.read(document, expression);
+        String result = read(document, expression);
         value = result.toString();
 
         return value;
@@ -62,7 +64,7 @@ public class JsonPathHelper {
 
     public static JSONArray getJsonArrayFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
         Object document = getDocument(jsonString);
-        return JsonPath.read(document, expression);
+        return read(document, expression);
     }
 
     /**
@@ -73,7 +75,7 @@ public class JsonPathHelper {
      */
     public static String[] getStringArrayFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
         Object document = getDocument(jsonString);
-        String resArray = JsonPath.read(document, expression);
+        String resArray = read(document, expression);
         String resString = resArray.toString().substring(1, resArray.toString().lastIndexOf("]") - 1);
         resString = resString.replace("},{", " ,");
         String[] array = resString.split(" ");
@@ -89,7 +91,7 @@ public class JsonPathHelper {
      */
     public static String getStringFromJsonpathArrayExpression(String jsonString, String expression) throws PathNotFoundException {
         Object document = getDocument(jsonString);
-        String resArray = JsonPath.read(document, expression);
+        String resArray = read(document, expression);
         return resArray;
 
     }
@@ -102,7 +104,7 @@ public class JsonPathHelper {
      */
     public static LinkedHashMap getJsonObjectFromJsonpathExpression(String jsonString, String expression) throws PathNotFoundException {
         Object document = getDocument(jsonString);
-        return JsonPath.read(document, expression);
+        return read(document, expression);
     }
 
     /**
@@ -114,15 +116,20 @@ public class JsonPathHelper {
      */
     public static String findString(LinkedHashMap<String, Object> jsonMap, String key) throws PathNotFoundException {
         String value = null;
+
+        /*
         if (!jsonMap.containsKey(key)) {
             throw new PathNotFoundException(key + " was not found in " + jsonMap);
         }
+        */
         try {
-            value = (String) jsonMap.get(key);
+            value = read(jsonMap, key);
         } catch (Exception e) {
             log.debug("Failed to find {} in {}", key, jsonMap);
         }
         return value;
+
+
     }
 
 

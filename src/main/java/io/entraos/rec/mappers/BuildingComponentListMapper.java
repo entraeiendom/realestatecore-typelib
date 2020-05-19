@@ -2,10 +2,13 @@ package io.entraos.rec.mappers;
 
 import com.jayway.jsonpath.PathNotFoundException;
 import io.entraos.rec.domain.RealEstateCore;
+import io.entraos.rec.domain.Room;
+import net.minidev.json.JSONArray;
 import org.slf4j.Logger;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import static com.jayway.jsonpath.JsonPath.read;
@@ -22,8 +25,18 @@ public class BuildingComponentListMapper {
         List<RealEstateCore> buildingComponents = new ArrayList<>();
 
         Object document = getDocument(json);
-        Object rooms = read(document, "$.member[0]");
-        log.info("ttt: {}", rooms);
+        Object rooms = read(document, "$.member[*]");
+        if (rooms instanceof JSONArray) {
+            for (int i = 0; i < ((JSONArray) rooms).size(); i++) {
+                Object roomJson = ((JSONArray) rooms).get(i);
+                if (roomJson instanceof LinkedHashMap) {
+                    Room room = RoomJsonMapper.fromLinkedHashMap((LinkedHashMap)roomJson);
+                    if (room != null) {
+                        buildingComponents.add(room);
+                    }
+                }
+            }
+        }
         return buildingComponents;
     }
 
