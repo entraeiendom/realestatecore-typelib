@@ -47,5 +47,10 @@ public class RoomJsonMapperTest {
         assertNotNull(jsonMap);
         Room room = RoomJsonMapper.fromLinkedHashMap(jsonMap);
         assertNotNull(room);
+        assertEquals("670b079d-6030-4150-8756-dfef7d785387", room.getUuid());
+        assertEquals(null, room.getName());
+        assertEquals("10103", room.getTag());
+        assertEquals("e93bc342-33e2-4c70-ae8e-b4801839ae11", room.getLocatedInUuid());
+        assertEquals("3274ae50-afa2-4177-bc2a-824359ad8aa0", room.getFloorUuid());
     }
 }
