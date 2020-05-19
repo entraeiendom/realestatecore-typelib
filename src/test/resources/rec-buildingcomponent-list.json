@@ -1,0 +1,221 @@
+{
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/hydra/core#",
+    "BuildingComponent": "https://w3id.org/rec/core/BuildingComponent"
+  },
+  "@type": "Collection",
+  "member": [
+    {
+      "@context": {
+        "@vocab": "https://w3id.org/rec/core",
+        "Room": "https://w3id.org/rec/core/Room",
+        "isPartOfBuilding": "https://w3id.org/rec/core/isPartOfBuilding",
+        "hasSubBuildingComponent": "https://w3id.org/rec/core/hasSubBuildingComponent",
+        "hasSuperBuildingComponent": "https://w3id.org/rec/core/hasSuperBuildingComponent",
+        "isPartOfStorey": "https://w3id.org/rec/core/isPartOf",
+        "hasAlias": "http://proptechos.com/ontology/extension/hasAlias"
+      },
+      "@type": "Room",
+      "comment": {},
+      "createdTime": "2020-04-13T11:03:40.317Z",
+      "geoReferenceOrigo": "32.38;95.75;6.87",
+      "hasAlias": [],
+      "hasSubBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "hasSuperBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "isPartOfBuilding": {
+        "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+        "@type": "@id"
+      },
+      "isPartOfStorey": {
+        "@id": "https://en.proptechos.com/api/storey/d2e74e37-67e2-45f1-9c6e-5080dfbd7abc",
+        "@type": "@id"
+      },
+      "@id": "https://en.proptechos.com/api/buildingcomponent/686a2788-85d5-4e7a-9f3c-823fd2c1aac5",
+      "littera": "0101",
+      "popularName": null,
+      "roomType": "ClassRoom",
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "updatedTime": "2020-05-08T12:57:50.707Z"
+    },
+    {
+      "@context": {
+        "@vocab": "https://w3id.org/rec/core",
+        "Room": "https://w3id.org/rec/core/Room",
+        "isPartOfBuilding": "https://w3id.org/rec/core/isPartOfBuilding",
+        "hasSubBuildingComponent": "https://w3id.org/rec/core/hasSubBuildingComponent",
+        "hasSuperBuildingComponent": "https://w3id.org/rec/core/hasSuperBuildingComponent",
+        "isPartOfStorey": "https://w3id.org/rec/core/isPartOf",
+        "hasAlias": "http://proptechos.com/ontology/extension/hasAlias"
+      },
+      "@type": "Room",
+      "comment": {},
+      "createdTime": "2020-04-13T11:03:40.500Z",
+      "geoReferenceOrigo": "92.98;83.74;49.07",
+      "hasAlias": [],
+      "hasSubBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "hasSuperBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "isPartOfBuilding": {
+        "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+        "@type": "@id"
+      },
+      "isPartOfStorey": {
+        "@id": "https://en.proptechos.com/api/storey/3274ae50-afa2-4177-bc2a-824359ad8aa0",
+        "@type": "@id"
+      },
+      "@id": "https://en.proptechos.com/api/buildingcomponent/decae309-13a6-4566-bc81-d705b2a9e559",
+      "littera": "10101",
+      "popularName": null,
+      "roomType": "https://w3id.org/rec/building/ConferenceRoom",
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "updatedTime": "2020-05-08T12:57:50.707Z"
+    },
+    {
+      "@context": {
+        "@vocab": "https://w3id.org/rec/core",
+        "Room": "https://w3id.org/rec/core/Room",
+        "isPartOfBuilding": "https://w3id.org/rec/core/isPartOfBuilding",
+        "hasSubBuildingComponent": "https://w3id.org/rec/core/hasSubBuildingComponent",
+        "hasSuperBuildingComponent": "https://w3id.org/rec/core/hasSuperBuildingComponent",
+        "isPartOfStorey": "https://w3id.org/rec/core/isPartOf",
+        "hasAlias": "http://proptechos.com/ontology/extension/hasAlias"
+      },
+      "@type": "Room",
+      "comment": {},
+      "createdTime": "2020-04-13T11:03:40.680Z",
+      "geoReferenceOrigo": "32.49;110.64;11.87",
+      "hasAlias": [],
+      "hasSubBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "hasSuperBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "isPartOfBuilding": {
+        "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+        "@type": "@id"
+      },
+      "isPartOfStorey": {
+        "@id": "https://en.proptechos.com/api/storey/f776ba1c-0335-484c-b7cc-a87123a9eb3f",
+        "@type": "@id"
+      },
+      "@id": "https://en.proptechos.com/api/buildingcomponent/3a4cc554-590c-4078-8aa5-184020d3e78b",
+      "littera": "1101",
+      "popularName": null,
+      "roomType": "https://w3id.org/rec/building/Classroom",
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "updatedTime": "2020-05-08T12:57:50.707Z"
+    },
+    {
+      "@context": {
+        "@vocab": "https://w3id.org/rec/core",
+        "Room": "https://w3id.org/rec/core/Room",
+        "isPartOfBuilding": "https://w3id.org/rec/core/isPartOfBuilding",
+        "hasSubBuildingComponent": "https://w3id.org/rec/core/hasSubBuildingComponent",
+        "hasSuperBuildingComponent": "https://w3id.org/rec/core/hasSuperBuildingComponent",
+        "isPartOfStorey": "https://w3id.org/rec/core/isPartOf",
+        "hasAlias": "http://proptechos.com/ontology/extension/hasAlias"
+      },
+      "@type": "Room",
+      "comment": {},
+      "createdTime": "2020-04-13T11:03:40.870Z",
+      "geoReferenceOrigo": "60.79;88.25;53.07",
+      "hasAlias": [],
+      "hasSubBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "hasSuperBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "isPartOfBuilding": {
+        "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+        "@type": "@id"
+      },
+      "isPartOfStorey": {
+        "@id": "https://en.proptechos.com/api/storey/ea037065-6295-48fa-8559-383b19ec4691",
+        "@type": "@id"
+      },
+      "@id": "https://en.proptechos.com/api/buildingcomponent/d11802fd-96b4-47a6-b52b-8b611a1b17fb",
+      "littera": "11306",
+      "popularName": null,
+      "roomType": "https://w3id.org/rec/building/Stairwell",
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "updatedTime": "2020-05-08T12:57:50.707Z"
+    },
+    {
+      "@context": {
+        "@vocab": "https://w3id.org/rec/core",
+        "Room": "https://w3id.org/rec/core/Room",
+        "isPartOfBuilding": "https://w3id.org/rec/core/isPartOfBuilding",
+        "hasSubBuildingComponent": "https://w3id.org/rec/core/hasSubBuildingComponent",
+        "hasSuperBuildingComponent": "https://w3id.org/rec/core/hasSuperBuildingComponent",
+        "isPartOfStorey": "https://w3id.org/rec/core/isPartOf",
+        "hasAlias": "http://proptechos.com/ontology/extension/hasAlias"
+      },
+      "@type": "Room",
+      "comment": {},
+      "createdTime": "2020-04-13T11:03:41.050Z",
+      "geoReferenceOrigo": "26.58;99.17;17.07",
+      "hasAlias": [],
+      "hasSubBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "hasSuperBuildingComponent": {
+        "@id": null,
+        "@type": "@id"
+      },
+      "isPartOfBuilding": {
+        "@id": "https://en.proptechos.com/api/realestatecomponent/e93bc342-33e2-4c70-ae8e-b4801839ae11",
+        "@type": "@id"
+      },
+      "isPartOfStorey": {
+        "@id": "https://en.proptechos.com/api/storey/55cead9d-4d58-4d06-8336-910f5381a343",
+        "@type": "@id"
+      },
+      "@id": "https://en.proptechos.com/api/buildingcomponent/fbdae080-3cbf-439f-b0d7-b6a556b530db",
+      "littera": "2102",
+      "popularName": null,
+      "roomType": "ClassRoom",
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "updatedTime": "2020-05-08T12:57:50.707Z"
+    }
+  ],
+  "totalItems": 803,
+  "view": {
+    "@type": "PartialCollectionView",
+    "next": "https://en.proptechos.com/api/realestatecomponent?page=1&size=5",
+    "first": "https://en.proptechos.com/api/realestatecomponent?page=0&size=5",
+    "last": "https://en.proptechos.com/api/realestatecomponent?page=160&size=5"
+  }
+}
