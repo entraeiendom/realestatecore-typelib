@@ -1,0 +1,69 @@
+{
+  "content": [
+    {
+      "id": "686a2788-85d5-4e7a-9f3c-823fd2c1aac5",
+      "class": "Room",
+      "createdTime": "2020-04-13T11:03:40.317Z",
+      "updatedTime": "2020-05-08T12:57:50.707Z",
+      "hasAlias": [],
+      "comment": {},
+      "littera": "0101",
+      "popularName": null,
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "isPartOfBuilding": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+      "hasSuperBuildingComponent": null,
+      "hasSubBuildingComponent": null,
+      "geoReferenceOrigo": "32.38;95.75;6.87",
+      "isPartOfStorey": "d2e74e37-67e2-45f1-9c6e-5080dfbd7abc",
+      "roomType": "ClassRoom"
+    },
+    {
+      "id": "decae309-13a6-4566-bc81-d705b2a9e559",
+      "class": "Room",
+      "createdTime": "2020-04-13T11:03:40.500Z",
+      "updatedTime": "2020-05-08T12:57:50.707Z",
+      "hasAlias": [],
+      "comment": {},
+      "littera": "10101",
+      "popularName": null,
+      "source": {
+        "createdByAgent": "taras@idunrealestate.com",
+        "createdByApp": "RecAPI"
+      },
+      "isPartOfBuilding": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+      "hasSuperBuildingComponent": null,
+      "hasSubBuildingComponent": null,
+      "geoReferenceOrigo": "92.98;83.74;49.07",
+      "isPartOfStorey": "3274ae50-afa2-4177-bc2a-824359ad8aa0",
+      "roomType": "https://w3id.org/rec/building/ConferenceRoom"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "pageNumber": 0,
+    "pageSize": 50,
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 803,
+  "totalPages": 17,
+  "last": false,
+  "sort": {
+    "sorted": false,
+    "unsorted": true,
+    "empty": true
+  },
+  "number": 0,
+  "numberOfElements": 50,
+  "first": true,
+  "size": 50,
+  "empty": false
+}

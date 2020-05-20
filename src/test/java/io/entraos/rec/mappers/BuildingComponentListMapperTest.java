@@ -58,4 +58,20 @@ public class BuildingComponentListMapperTest {
         Number count = BuildingComponentListMapper.findCount(json);
         assertEquals(count, BuildingComponentListMapper.findCount(json));
     }
+
+    @Test
+    public void findFromProptechOs() throws Exception {
+        ClassLoader classLoader = new DeviceJsonMapperTest().getClass().getClassLoader();
+        File file = new File(classLoader.getResource("proptechos-buildingcomponenst-find.json").getFile());
+        assertTrue(file.exists());
+
+        //Read File Content
+        json = new String(Files.readAllBytes(file.toPath()));
+        assertNotNull(json);
+        assertFalse(json.isEmpty());
+        List<RealEstateCore> buildingComponents = BuildingComponentListMapper.fromJson(json);
+        assertNotNull(buildingComponents);
+        assertEquals(2, buildingComponents.size());
+
+    }
 }

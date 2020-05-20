@@ -25,7 +25,12 @@ public class BuildingComponentListMapper {
         List<RealEstateCore> buildingComponents = new ArrayList<>();
 
         Object document = getDocument(json);
-        Object rooms = read(document, "$.member[*]");
+        Object rooms =  null;
+        try {
+            rooms = read(document, "$.member[*]");
+        } catch (PathNotFoundException e) {
+            rooms = read(document, "$.content[*]");
+        }
         if (rooms instanceof JSONArray) {
             for (int i = 0; i < ((JSONArray) rooms).size(); i++) {
                 Object roomJson = ((JSONArray) rooms).get(i);
@@ -78,7 +83,11 @@ public class BuildingComponentListMapper {
         try {
            count = findJsonPathNumber(json, "$.totalItems");
         } catch (PathNotFoundException | IllegalArgumentException e) {
-            log.debug("Failed to find \"totalItems\" in json {}. Reason: {}", json, e.getMessage());
+            try {
+                count = findJsonPathNumber(json, "$.totalElements");
+            } catch (PathNotFoundException | IllegalArgumentException ne) {
+                log.debug("Failed to find \"totalItems\" in json {}. Reason: {}", json, e.getMessage());
+            }
         }
         return count;
     }
