@@ -1,0 +1,42 @@
+[
+  {
+    "class": "Storey",
+    "roomType": null,
+    "id": "d2e74e37-67e2-45f1-9c6e-5080dfbd7abc",
+    "createdTime": "2020-04-13T11:03:40.217Z",
+    "updatedTime": "2020-05-08T12:57:50.707Z",
+    "hasAlias": [],
+    "comment": {},
+    "littera": "0",
+    "popularName": "0",
+    "source": {
+      "createdByAgent": "taras@idunrealestate.com",
+      "createdByApp": "RecAPI"
+    },
+    "isPartOfBuilding": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+    "hasSuperBuildingComponent": null,
+    "hasSubBuildingComponent": null,
+    "geoReferenceOrigo": null,
+    "isPartOfStorey": null
+  },
+  {
+    "class": "Storey",
+    "roomType": null,
+    "id": "3274ae50-afa2-4177-bc2a-824359ad8aa0",
+    "createdTime": "2020-04-13T11:03:40.453Z",
+    "updatedTime": "2020-05-08T12:57:50.707Z",
+    "hasAlias": [],
+    "comment": {},
+    "littera": "10",
+    "popularName": "10",
+    "source": {
+      "createdByAgent": "taras@idunrealestate.com",
+      "createdByApp": "RecAPI"
+    },
+    "isPartOfBuilding": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+    "hasSuperBuildingComponent": null,
+    "hasSubBuildingComponent": null,
+    "geoReferenceOrigo": null,
+    "isPartOfStorey": null
+  }
+]

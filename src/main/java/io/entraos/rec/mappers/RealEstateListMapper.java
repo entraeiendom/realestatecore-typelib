@@ -21,15 +21,15 @@ public class RealEstateListMapper {
         List<RealEstateCore> realEstates = new ArrayList<>();
 
         Object document = getDocument(json);
-        Object realEtates =  null;
+        Object singleEstate =  null;
         try {
-            realEtates = read(document, "$.member[*]");
+            singleEstate = read(document, "$.member[*]");
         } catch (PathNotFoundException e) {
-            realEtates = read(document, "$.content[*]");
+            singleEstate = read(document, "$.content[*]");
         }
-        if (realEtates instanceof JSONArray) {
-            for (int i = 0; i < ((JSONArray) realEtates).size(); i++) {
-                Object realEstateJson = ((JSONArray) realEtates).get(i);
+        if (singleEstate instanceof JSONArray) {
+            for (int i = 0; i < ((JSONArray) singleEstate).size(); i++) {
+                Object realEstateJson = ((JSONArray) singleEstate).get(i);
                 if (realEstateJson instanceof LinkedHashMap) {
                     RealEstate realEstate = RealEstateJsonMapper.fromLinkedHashMap((LinkedHashMap)realEstateJson);
                     if (realEstate != null) {
