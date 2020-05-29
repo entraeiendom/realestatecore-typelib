@@ -28,8 +28,8 @@ public class RealEstateJsonMapperTest {
 
     @Test
     public void fromJson() {
-        assertNull(SensorJsonMapper.fromJson(null));
-        assertNull(SensorJsonMapper.fromJson("{}"));
+        assertNull(RealEstateJsonMapper.fromJson(null));
+        assertNull(RealEstateJsonMapper.fromJson("{}"));
         RealEstate realEstate = RealEstateJsonMapper.fromJson(json);
         assertNotNull(realEstate);
         assertEquals("1dbb6518-704b-4b77-93af-70369b1d765c", realEstate.getUuid());

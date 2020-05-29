@@ -13,17 +13,17 @@ public class RealEstateJsonMapper {
 
     public static RealEstate fromJson(String json) {
         RealEstate realEstate = null;
-       try {
-           String type = findJsonPathValue(json, "$.class");
-           if (type != null && type.equals("RealEstate")) {
-               String uuid = findJsonPathValue(json, "$.id");
-               String name = findJsonPathValue(json, "$.popularName");
-               String tag = findJsonPathValue(json, "$.littera");
-               realEstate = new RealEstateBuilder().withUuid(uuid)
-                       .withName(name)
-                       .withTag(tag)
-                       .build();
-           }
+        try {
+            String type = findJsonPathValue(json, "$.class");
+            if (type != null && type.equals("RealEstate")) {
+                String uuid = findJsonPathValue(json, "$.id");
+                String name = findJsonPathValue(json, "$.popularName");
+                String tag = findJsonPathValue(json, "$.littera");
+                realEstate = new RealEstateBuilder().withUuid(uuid)
+                        .withName(name)
+                        .withTag(tag)
+                        .build();
+            }
         } catch (PathNotFoundException e) {
             log.debug("Failed to build RealEstate from {}. Reason {}", json, e.getMessage());
         } catch (IllegalArgumentException e) {
