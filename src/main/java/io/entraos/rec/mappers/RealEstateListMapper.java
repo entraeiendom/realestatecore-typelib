@@ -18,7 +18,7 @@ public class RealEstateListMapper {
     private static final Logger log = getLogger(RealEstateListMapper.class);
 
     public static List<RealEstateCore> fromJson(String json) {
-        List<RealEstateCore> buildingComponents = new ArrayList<>();
+        List<RealEstateCore> realEstates = new ArrayList<>();
 
         Object document = getDocument(json);
         Object realEtates =  null;
@@ -33,11 +33,11 @@ public class RealEstateListMapper {
                 if (realEstateJson instanceof LinkedHashMap) {
                     RealEstate realEstate = RealEstateJsonMapper.fromLinkedHashMap((LinkedHashMap)realEstateJson);
                     if (realEstate != null) {
-                        buildingComponents.add(realEstate);
+                        realEstates.add(realEstate);
                     }
                 }
             }
         }
-        return buildingComponents;
+        return realEstates;
     }
 }
