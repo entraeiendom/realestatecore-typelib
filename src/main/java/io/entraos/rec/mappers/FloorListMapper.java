@@ -21,15 +21,19 @@ public class FloorListMapper {
         List<RealEstateCore> floors= new ArrayList<>();
 
         Object document = getDocument(json);
-        Object floorObj =  null;
-        try {
-            floorObj = read(document, "$.member[*]");
-        } catch (PathNotFoundException e) {
-            floorObj = read(document, "$.content[*]");
+        Object floorsArray =  null;
+        if (document instanceof JSONArray) {
+            floorsArray = document;
+        } else {
+            try {
+                floorsArray = read(document, "$.member[*]");
+            } catch (PathNotFoundException e) {
+                floorsArray = read(document, "$.content[*]");
+            }
         }
-        if (floorObj instanceof JSONArray) {
-            for (int i = 0; i < ((JSONArray) floorObj).size(); i++) {
-                Object floorJson = ((JSONArray) floorObj).get(i);
+        if (floorsArray instanceof JSONArray) {
+            for (int i = 0; i < ((JSONArray) floorsArray).size(); i++) {
+                Object floorJson = ((JSONArray) floorsArray).get(i);
                 if (floorJson instanceof LinkedHashMap) {
                     Floor floor = FloorJsonMapper.fromLinkedHashMap((LinkedHashMap)floorJson);
                     if (floor != null) {
