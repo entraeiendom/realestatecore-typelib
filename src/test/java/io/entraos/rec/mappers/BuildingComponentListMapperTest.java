@@ -62,7 +62,7 @@ public class BuildingComponentListMapperTest {
     @Test
     public void findFromProptechOs() throws Exception {
         ClassLoader classLoader = new DeviceJsonMapperTest().getClass().getClassLoader();
-        File file = new File(classLoader.getResource("proptechos-buildingcomponenst-find.json").getFile());
+        File file = new File(classLoader.getResource("proptechos-buildingcomponents-find.json").getFile());
         assertTrue(file.exists());
 
         //Read File Content
