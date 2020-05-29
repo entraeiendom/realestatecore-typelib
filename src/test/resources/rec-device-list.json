@@ -1,0 +1,91 @@
+{
+  "content": [
+    {
+      "id": "f34340fc-8f5a-4b10-bb52-000c1bef915a",
+      "class": "Device",
+      "createdTime": "2020-04-13T12:16:52.280Z",
+      "updatedTime": "2020-05-14T10:55:20.100Z",
+      "hasAlias": [],
+      "comment": {},
+      "littera": null,
+      "popularName": null,
+      "source": {
+        "updatedByAgent": "taras@idunrealestate.com",
+        "databasePath": "/+001=434.0801-OS001/BACnet Interface/MSTP Network_1163/=563.RT8201-Romtype_6/Application",
+        "createdByAgent": "taras@idunrealestate.com",
+        "updatedByApp": "RecAPI",
+        "aggregationPeriodMillis": "5000",
+        "createdByApp": "RecAPI",
+        "aggregate": "false"
+      },
+      "hasDeviceFunctionType": "https://w3id.org/rec/device/DataAcquisition",
+      "isMountedInBuildingComponent": "805f6a49-0fd3-4335-b278-e70ad37c0390",
+      "servesBuildingComponent": null,
+      "servesBuilding": null,
+      "hasSuperDevice": null,
+      "hasSubDevices": [
+        "dbf72815-f62f-476b-b1a1-f339d67bd743",
+        "4d91df3f-4ad1-4349-88c2-3422cf3a1ce7",
+        "56f96d7c-d83c-4c1c-ac3c-73ff22085143",
+        "d2a83cdf-e38b-494f-b90a-c3e47859327e"
+      ],
+      "isServedByDevice": null,
+      "servesDevice": null
+    },
+    {
+      "id": "13fc99ed-556a-4ba4-a330-000effbb7c0d",
+      "class": "Sensor",
+      "createdTime": "2020-04-13T12:16:18.777Z",
+      "updatedTime": "2020-05-14T10:54:42.057Z",
+      "hasAlias": [],
+      "comment": {},
+      "littera": "/+001=434.0701-OS001/BACnet Interface/MSTP Network_1142/=563.RT_RY7250-Romtype_4/Application/Room Humidity",
+      "popularName": null,
+      "source": {
+        "sendOnUpdate": "false",
+        "updatedByAgent": "taras@idunrealestate.com",
+        "createdByAgent": "taras@idunrealestate.com",
+        "pointName": "Room Humidity",
+        "updatedByApp": "RecAPI",
+        "writeable": "0",
+        "createdByApp": "RecAPI",
+        "forceable": "0",
+        "type": "double"
+      },
+      "hasDeviceFunctionType": null,
+      "isMountedInBuildingComponent": "9b254f55-ef1b-4280-90c8-98f9492b7886",
+      "servesBuildingComponent": null,
+      "servesBuilding": null,
+      "hasSuperDevice": "d447c48a-e25f-48c6-8a64-89e82d186da4",
+      "deviceMeasurementUnit": "https://w3id.org/rec/core/RelativeHumidity",
+      "deviceQuantityKind": "https://w3id.org/rec/core/Humidity",
+      "devicePlacementContext": "https://w3id.org/rec/device/IndoorAir",
+      "observesActuator": null
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": true,
+      "unsorted": false,
+      "empty": false
+    },
+    "pageNumber": 0,
+    "pageSize": 2,
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 1384,
+  "totalPages": 692,
+  "last": false,
+  "sort": {
+    "sorted": true,
+    "unsorted": false,
+    "empty": false
+  },
+  "number": 0,
+  "numberOfElements": 2,
+  "first": true,
+  "size": 2,
+  "empty": false
+}
