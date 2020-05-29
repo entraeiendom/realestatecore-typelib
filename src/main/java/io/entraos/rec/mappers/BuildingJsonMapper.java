@@ -5,7 +5,10 @@ import io.entraos.rec.builders.BuildingBuilder;
 import io.entraos.rec.domain.Building;
 import org.slf4j.Logger;
 
+import java.util.LinkedHashMap;
+
 import static io.entraos.rec.utils.JsonPathHelper.findJsonPathValue;
+import static io.entraos.rec.utils.JsonPathHelper.findString;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class BuildingJsonMapper {
@@ -31,6 +34,37 @@ public class BuildingJsonMapper {
         } catch (IllegalArgumentException e) {
             log.debug("Failed to build Building from {}. Reason {}", json, e.getMessage());
         }
+        return building;
+    }
+
+    public static Building fromLinkedHashMap(LinkedHashMap jsonMap) {
+        Building building = null;
+
+        String type = null;
+        try {
+            type = findString(jsonMap, "$.class");
+            if (type != null && type.equals("Building")) {
+                //this.uuid, this.name, this.tag, this.mountedOnDeviceUuid,this.factoryId
+
+                String uuid = findString(jsonMap, "id");
+                String name = findString(jsonMap, "popularName");
+                String tag = findString(jsonMap, "littera");
+                String isPartOfRealEstate = findString(jsonMap, "isPartOfRealEstate");
+                building = new BuildingBuilder().withUuid(uuid)
+                        .withName(name)
+                        .withTag(tag)
+                        .locatedIn(isPartOfRealEstate)
+                        .build();
+
+
+            }
+        } catch (PathNotFoundException e) {
+            log.debug("Failed to build Building from {}. Reason {}", jsonMap, e.getMessage());
+        } catch (IllegalArgumentException e) {
+            log.debug("Failed to build Building from {}. Reason {}", jsonMap, e.getMessage());
+        }
+
+
         return building;
     }
 }

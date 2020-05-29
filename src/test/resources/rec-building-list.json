@@ -1,0 +1,50 @@
+{
+  "content": [
+    {
+      "id": "e93bc342-33e2-4c70-ae8e-b4801839ae11",
+      "class": "Building",
+      "createdTime": "2020-04-13T09:08:26.280Z",
+      "updatedTime": "2020-05-26T07:01:54.433Z",
+      "hasAlias": [
+        {
+          "id": "string",
+          "isMemberOfAliasNamespace": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        }
+      ],
+      "comment": {},
+      "littera": null,
+      "popularName": "Bygning 001",
+      "source": {
+        "updatedByAgent": "me@example.com",
+        "updatedByApp": "RecAPI"
+      },
+      "isPartOfRealEstate": "1dbb6518-704b-4b77-93af-70369b1d765c",
+      "geoReferenceOrigo": "10.000000;59.000000;26.0"
+    }
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": false,
+      "unsorted": true,
+      "empty": true
+    },
+    "pageNumber": 0,
+    "pageSize": 50,
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 1,
+  "totalPages": 1,
+  "last": true,
+  "sort": {
+    "sorted": false,
+    "unsorted": true,
+    "empty": true
+  },
+  "number": 0,
+  "numberOfElements": 1,
+  "first": true,
+  "size": 50,
+  "empty": false
+}
