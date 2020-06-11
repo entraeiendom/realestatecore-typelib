@@ -20,11 +20,18 @@ public class SensorJsonMapper {
                String name = findJsonPathValue(json, "$.popularName");
                String tag = findJsonPathValue(json, "$.littera");
                String mountedOnDeviceUuid = findJsonPathValue(json, "$.hasSuperDevice.@id");
+               String moutedInBuildingComponentUuid = null;
+               try {
+                   moutedInBuildingComponentUuid = findJsonPathValue(json, "$.isMountedInBuildingComponent.@id");
+               } catch (PathNotFoundException e) {
+                   log.debug("No buildingComponent is mapped for this Sensor: {}", uuid);
+               }
                String factoryId = null; //TODO findJsonPathValue(json, "TODO");
                sensor = new SensorBuilder().withUuid(uuid)
                        .withName(name)
                        .withTag(tag)
                        .onDevice(mountedOnDeviceUuid)
+                       .inBuildingComponent(moutedInBuildingComponentUuid)
                        .withFactoryId(factoryId)
                        .build();
            }

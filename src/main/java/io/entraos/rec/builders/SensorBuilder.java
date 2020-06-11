@@ -6,10 +6,16 @@ public class SensorBuilder extends AbstractRealEstateCoreBuilder<SensorBuilder, 
 
 
     private String mountedOnDeviceUuid;
+    private String moundedInBuildingComponent;
     private String factoryId; //Mac address
 
     public SensorBuilder onDevice(String deviceUuid) {
         this.mountedOnDeviceUuid = deviceUuid;
+        return this;
+    }
+
+    public SensorBuilder inBuildingComponent(String buildingComponentUuid) {
+        this.moundedInBuildingComponent = buildingComponentUuid;
         return this;
     }
 
@@ -20,7 +26,7 @@ public class SensorBuilder extends AbstractRealEstateCoreBuilder<SensorBuilder, 
 
     @Override
     protected Sensor internalBuild() {
-        return new Sensor(this.uuid, this.name, this.tag, this.mountedOnDeviceUuid,this.factoryId);
+        return new Sensor(this.uuid, this.name, this.tag, this.mountedOnDeviceUuid, this.moundedInBuildingComponent, this.factoryId);
     }
 
 }

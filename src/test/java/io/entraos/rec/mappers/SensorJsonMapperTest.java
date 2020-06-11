@@ -36,6 +36,7 @@ public class SensorJsonMapperTest {
         assertEquals(null, sensor.getName());
         assertEquals("01/+001=434.1001-OS001/BACnet Interface/MSTP Network_1192/=563.RT_RY10103-Romtype_3/Application/CO2 Level", sensor.getTag());
         assertEquals("https://en.proptechos.com/api/device/5dc009d6-d3c3-4381-bebd-910b0aca3a78", sensor.getMountedOnDeviceUuid());
+        assertEquals("https://en.proptechos.com/api/buildingcomponent/670b079d-6030-4150-8756-dfef7d785387",sensor.getMountedInBuildingComponentUuid());
         assertEquals(null, sensor.getFactoryId());
     }
 }
