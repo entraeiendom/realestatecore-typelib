@@ -30,6 +30,7 @@ public class RoomJsonMapper {
                         .withTag(tag)
                         .inBuilding(locatedInBuilding)
                         .atFloor(locatedAtFloor)
+                        .withRawJson(json)
                         .build();
 
             }

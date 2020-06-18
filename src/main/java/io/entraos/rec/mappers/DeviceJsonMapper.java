@@ -29,6 +29,7 @@ public class DeviceJsonMapper {
                        .withTag(tag)
                        .mountedInBuildingComponent(mountedInBuildingComponentUuid)
                        .withFactoryId(factoryId)
+                       .withRawJson(json)
                        .build();
            }
         } catch (PathNotFoundException e) {

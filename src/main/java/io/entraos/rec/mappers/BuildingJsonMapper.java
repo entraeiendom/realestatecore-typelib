@@ -27,6 +27,7 @@ public class BuildingJsonMapper {
                         .withName(name)
                         .withTag(tag)
                         .locatedIn(isPartOfRealEstate)
+                        .withRawJson(json)
                         .build();
             }
         } catch (PathNotFoundException e) {

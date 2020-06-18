@@ -33,6 +33,7 @@ public class SensorJsonMapper {
                        .onDevice(mountedOnDeviceUuid)
                        .inBuildingComponent(moutedInBuildingComponentUuid)
                        .withFactoryId(factoryId)
+                       .withRawJson(json)
                        .build();
            }
         } catch (PathNotFoundException e) {

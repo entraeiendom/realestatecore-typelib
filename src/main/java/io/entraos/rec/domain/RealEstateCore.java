@@ -6,6 +6,7 @@ public abstract class RealEstateCore {
     private String uuid;
     private String name;  //Eg 10104
     private String tag;
+    private String rawJson;
 
     protected RealEstateCore(String recClass) {
         this.recClass = recClass;
@@ -44,5 +45,13 @@ public abstract class RealEstateCore {
 
     public String getRecClass() {
         return recClass;
+    }
+
+    public String getRawJson() {
+        return rawJson;
+    }
+
+    public void setRawJson(String rawJson) {
+        this.rawJson = rawJson;
     }
 }

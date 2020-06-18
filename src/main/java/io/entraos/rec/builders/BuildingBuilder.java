@@ -14,7 +14,11 @@ public class BuildingBuilder extends AbstractRealEstateCoreBuilder<BuildingBuild
 
     @Override
     protected Building internalBuild() {
-        return new Building(this.uuid, this.name, this.tag, this.realestateUuid);
+        Building building = new Building(this.uuid, this.name, this.tag, this.realestateUuid);
+        if (this.rawJson != null) {
+            building.setRawJson(this.rawJson);
+        }
+        return building;
     }
 
 }

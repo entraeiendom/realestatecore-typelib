@@ -27,6 +27,7 @@ public class FloorJsonMapper {
                        .withName(name)
                        .withTag(tag)
                        .inBuilding(isPartOfBuilding)
+                       .withRawJson(json)
                        .build();
            }
         } catch (PathNotFoundException e) {

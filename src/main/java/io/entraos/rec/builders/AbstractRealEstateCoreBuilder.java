@@ -8,6 +8,7 @@ public abstract class AbstractRealEstateCoreBuilder<SELF extends RealEstateCoreB
     String uuid;
     String name;  //Eg 10104
     String tag;
+    String rawJson;
 
     @Override
     public SELF withName(String name) {
@@ -25,6 +26,12 @@ public abstract class AbstractRealEstateCoreBuilder<SELF extends RealEstateCoreB
     @Override
     public SELF withTag(String tag) {
         this.tag = tag;
+        return self();
+    }
+
+    @Override
+    public SELF withRawJson(String json) {
+        this.rawJson = json;
         return self();
     }
 

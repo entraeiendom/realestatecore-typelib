@@ -8,7 +8,11 @@ public class RealEstateBuilder extends AbstractRealEstateCoreBuilder<RealEstateB
 
     @Override
     protected RealEstate internalBuild() {
-        return new RealEstate(this.uuid, this.name, this.tag);
+        RealEstate realEstate = new RealEstate(this.uuid, this.name, this.tag);
+        if (this.rawJson != null) {
+            realEstate.setRawJson(this.rawJson);
+        }
+        return realEstate;
     }
 
 }

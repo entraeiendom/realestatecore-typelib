@@ -14,7 +14,11 @@ public class FloorBuilder extends AbstractRealEstateCoreBuilder<FloorBuilder, Fl
 
     @Override
     protected Floor internalBuild() {
-        return new Floor(this.uuid, this.name, this.tag, this.buildingUuid);
+        Floor floor = new Floor(this.uuid, this.name, this.tag, this.buildingUuid);
+        if (this.rawJson != null) {
+            floor.setRawJson(this.rawJson);
+        }
+        return floor;
     }
 
 }

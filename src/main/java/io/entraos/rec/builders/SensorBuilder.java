@@ -26,7 +26,11 @@ public class SensorBuilder extends AbstractRealEstateCoreBuilder<SensorBuilder, 
 
     @Override
     protected Sensor internalBuild() {
-        return new Sensor(this.uuid, this.name, this.tag, this.mountedOnDeviceUuid, this.moundedInBuildingComponent, this.factoryId);
+        Sensor sensor = new Sensor(this.uuid, this.name, this.tag, this.mountedOnDeviceUuid, this.moundedInBuildingComponent, this.factoryId);
+        if (this.rawJson != null) {
+            sensor.setRawJson(this.rawJson);
+        }
+        return sensor;
     }
 
 }

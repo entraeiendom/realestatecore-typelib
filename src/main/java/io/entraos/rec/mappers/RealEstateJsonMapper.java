@@ -25,6 +25,7 @@ public class RealEstateJsonMapper {
                 realEstate = new RealEstateBuilder().withUuid(uuid)
                         .withName(name)
                         .withTag(tag)
+                        .withRawJson(json)
                         .build();
             }
         } catch (PathNotFoundException e) {

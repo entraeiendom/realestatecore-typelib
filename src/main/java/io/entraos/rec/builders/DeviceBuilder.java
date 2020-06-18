@@ -20,7 +20,11 @@ public class DeviceBuilder extends AbstractRealEstateCoreBuilder<DeviceBuilder, 
 
     @Override
     protected Device internalBuild() {
-        return new Device(this.uuid, this.name, this.tag, this.mountedInBuildingComponentUuid);
+        Device device = new Device(this.uuid, this.name, this.tag, this.mountedInBuildingComponentUuid);
+        if (this.rawJson != null) {
+            device.setRawJson(this.rawJson);
+        }
+        return device;
     }
 
 }

@@ -20,7 +20,11 @@ public class RoomBuilder extends AbstractRealEstateCoreBuilder<RoomBuilder, Room
 
     @Override
     protected Room internalBuild() {
-        return new Room(this.uuid, this.name, this.tag, this.realestateUuid, floorUuid);
+        Room room = new Room(this.uuid, this.name, this.tag, this.realestateUuid, floorUuid);
+        if (this.rawJson != null) {
+            room.setRawJson(this.rawJson);
+        }
+        return room;
     }
 
 }
