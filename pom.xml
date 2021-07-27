@@ -18,7 +18,7 @@
 
   <properties>
     <service.name>realestatecore-typelib</service.name>
-    <slf4j.version>1.7.30</slf4j.version>
+    <slf4j.version>1.7.31</slf4j.version>
     <additionalparam>-Xdoclint:none</additionalparam>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
