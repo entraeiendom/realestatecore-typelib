@@ -5,7 +5,7 @@
 
   <groupId>io.entraos.rec</groupId>
   <artifactId>realestatecore-typelib</artifactId>
-  <version>0.3.10-SNAPSHOT</version>
+  <version>0.3.10</version>
   <packaging>jar</packaging>
 
   <name>realestatecore-typelib</name>
@@ -13,7 +13,7 @@
     <developerConnection>scm:git:ssh://git@github.com/entraeiendom/realestatecore-typelib.git</developerConnection>
     <connection>scm:git:https://github.com/entraeiendom/realestatecore-typelib.git</connection>
     <url>https://github.com/entraeiendom/realestatecore-typelib</url>
-    <tag>HEAD</tag>
+    <tag>realestatecore-typelib-0.3.10</tag>
   </scm>
 
   <properties>
