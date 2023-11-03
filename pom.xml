@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.entraos.rec</groupId>
-  <artifactId>realestatecore-typelib</artifactId>
-  <version>0.3.16-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <groupId>io.entraos.rec</groupId>
+    <artifactId>realestatecore-typelib</artifactId>
+    <version>0.3.16-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-  <name>realestatecore-typelib</name>
-  <scm>
-    <developerConnection>scm:git:ssh://git@github.com/entraeiendom/realestatecore-typelib.git</developerConnection>
-    <connection>scm:git:https://github.com/entraeiendom/realestatecore-typelib.git</connection>
-    <url>https://github.com/entraeiendom/realestatecore-typelib</url>
-    <tag>HEAD</tag>
-  </scm>
+    <name>realestatecore-typelib</name>
+    <scm>
+        <developerConnection>scm:git:ssh://git@github.com/entraeiendom/realestatecore-typelib.git</developerConnection>
+        <connection>scm:git:https://github.com/entraeiendom/realestatecore-typelib.git</connection>
+        <url>https://github.com/entraeiendom/realestatecore-typelib</url>
+        <tag>HEAD</tag>
+    </scm>
 
-  <properties>
-    <service.name>realestatecore-typelib</service.name>
-    <slf4j.version>1.7.36</slf4j.version>
-    <additionalparam>-Xdoclint:none</additionalparam>
-      <maven.compiler.source>1.8</maven.compiler.source>
-      <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+    <properties>
+        <service.name>realestatecore-typelib</service.name>
+        <json-smart.version>2.4.10</json-smart.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <additionalparam>-Xdoclint:none</additionalparam>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
   <dependencies>
+
+      <dependency>
+          <groupId>net.minidev</groupId>
+          <artifactId>json-smart</artifactId>
+          <version>${json-smart.version}</version>
+      </dependency>
+
     <dependency>
       <groupId>com.jayway.jsonpath</groupId>
       <artifactId>json-path</artifactId>
       <version>2.7.0</version>
+        <exclusions>
+            <exclusion>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+            </exclusion>
+        </exclusions>
     </dependency>
 
     <!-- Test -->
@@ -46,67 +61,67 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.3.1</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.11.0</version>
-          <configuration>
-            <source>${maven.compiler.source}</source>
-            <target>${maven.compiler.target}</target>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.3.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.12.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.4.5</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-  <distributionManagement>
-    <repository>
-      <id>entraos-public</id>
-      <name>EntraOS Release Repository</name>
-      <url>https://nexus.entraos.io/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>entraos-public</id>
-      <name>EntraOS Snapshot Repository</name>
-      <url>https://nexus.entraos.io/content/repositories/snapshots</url>
-    </snapshotRepository>
+    <build>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+                <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.3.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.12.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.4.5</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>entraos-public</id>
+            <name>EntraOS Release Repository</name>
+            <url>https://nexus.entraos.io/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>entraos-public</id>
+            <name>EntraOS Snapshot Repository</name>
+            <url>https://nexus.entraos.io/content/repositories/snapshots</url>
+        </snapshotRepository>
 
-  </distributionManagement>
+    </distributionManagement>
 </project>
