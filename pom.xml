@@ -19,7 +19,7 @@
 
     <properties>
         <service.name>realestatecore-typelib</service.name>
-        <json-smart.version>2.4.10</json-smart.version>
+        <json-smart.version>2.5.0</json-smart.version>
         <slf4j.version>1.7.36</slf4j.version>
         <additionalparam>-Xdoclint:none</additionalparam>
         <maven.compiler.source>1.8</maven.compiler.source>
